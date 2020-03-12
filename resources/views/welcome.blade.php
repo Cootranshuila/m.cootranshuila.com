@@ -450,7 +450,7 @@
 											<li class="item-content item-input">
 												<div class="item-inner">
 													<div class="item-input-wrap input-dropdown-wrap">
-														<select placeholder="Ciudad Origen" id="optOrigen" name="optOrigen" required>
+														<select placeholder="Ciudad Origen" id="optOrigen" name="optOrigen" required validate>
 															<option value="" disabled selected>Ciudad de Origen</option>
 														</select>
 													</div>
@@ -459,7 +459,7 @@
 											<li class="item-content item-input">
 												<div class="item-inner">
 													<div class="item-input-wrap input-dropdown-wrap">
-														<select placeholder="Ciudad Destino" id="optDestino" name="optDestino" required>
+														<select placeholder="Ciudad Destino" id="optDestino" name="optDestino" required validate>
 															<option value="" disabled selected>Ciudad de Destino</option>
 														</select>
 													</div>
@@ -468,7 +468,7 @@
 											<li class="item-content item-input">
 												<div class="item-inner"> 
 													<div class="item-input-wrap">
-														<input type="text" placeholder="Fecha de ida" readonly="readonly" id="check-in" name="txtFecSalida" required>
+														<input type="text" placeholder="Fecha de ida" readonly="readonly" id="check-in" class="txtFecSalida" name="txtFecSalida" required validate>
 													</div>
 												</div>
 											</li>
@@ -482,7 +482,7 @@
                                         </ul>
                                         <div class="button-submit">
 											{{-- <button class="button"><i class="searchbar-icon"></i> Enviar</button> --}}
-											<a href="/compra/" class="button" onclick="cargar_compra()" id="btn-comprar">Enviar</a>
+											<a href="/compra/" class="button disabled" onclick="click_compra()" id="btn-comprar" style="color:#f0f0f0">Enviar</a>
                                         </div>
 									</form>
 									

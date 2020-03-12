@@ -14,6 +14,7 @@ jQuery(document).ready(function () {
 				`
 			}
 			$('#optOrigen').html(content)
+			abilitar_boton()
 		}
 	})
 
@@ -32,21 +33,32 @@ jQuery(document).ready(function () {
 					`
 				}
 				$('#optDestino').html(content)
+				abilitar_boton()
 			}
 		})
 	})
-
-	// PRUEBA!
-	jQuery('#btn-compra').click(function () {
-		// jQuery('#content-compra').text('Holi, haz hecho clikc')
-		console.log(window.location.pathname)
-	})
-	
 });
 
-// <iframe src="https://cootranshuila.teletiquete.com/?optOrigen=72&optDestino=2344&txtFecSalida=2020-03-12&txtFecRegreso=" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>
+
+function abilitar_boton() {
+	var origen = jQuery('#optOrigen').val()
+	var destino = jQuery('#optDestino').val()
+	var fecha = jQuery('.txtFecSalida').val()
+
+	console.log('Origen = '+origen+' Destino = '+destino+' Fecha = '+fecha)
+
+	if (origen != '' && destino != '' && fecha != '') {
+		jQuery('#btn-comprar').removeClass('disabled')
+	} else {
+		jQuery('#btn-comprar').addClass('disabled')
+	}
+}
+
+function click_compra() {
+	setTimeout('cargar_compra()', 1000)
+}
 
 function cargar_compra() {
-	jQuery('#content-compra').html(`<iframe src="https://cootranshuila.teletiquete.com/?optOrigen=72&optDestino=2344&txtFecSalida=2020-03-12&txtFecRegreso=" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>`)
-	console.log(window.location.hash)
+	var datos = jQuery('#form-compra').serialize()
+	jQuery('#content-compra').html(`<iframe src="https://cootranshuila.teletiquete.com/?`+datos+`" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>`)
 }

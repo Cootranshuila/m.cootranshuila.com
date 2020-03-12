@@ -1907,4 +1907,11 @@ form.list ul .item-content .item-inner .item-input-wrap.input-dropdown-wrap::bef
     font-size: 12px;
 }
 
+/* Main styles */
+.item-input-error-message {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 5.3px;
+}
+
 /* ========== END PAGES ========== */
