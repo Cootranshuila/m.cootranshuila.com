@@ -39,13 +39,11 @@ jQuery(document).ready(function () {
 	})
 });
 
-
+// Funcion para habilitar el boton 
 function abilitar_boton() {
 	var origen = jQuery('#optOrigen').val()
 	var destino = jQuery('#optDestino').val()
 	var fecha = jQuery('.txtFecSalida').val()
-
-	console.log('Origen = '+origen+' Destino = '+destino+' Fecha = '+fecha)
 
 	if (origen != '' && destino != '' && fecha != '') {
 		jQuery('#btn-comprar').removeClass('disabled')
@@ -61,4 +59,6 @@ function click_compra() {
 function cargar_compra() {
 	var datos = jQuery('#form-compra').serialize()
 	jQuery('#content-compra').html(`<iframe src="https://cootranshuila.teletiquete.com/?`+datos+`" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>`)
+
+	jQuery('#form-compra')[0].reset()
 }

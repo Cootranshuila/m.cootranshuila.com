@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use Validator,Redirect,Response,File;
+use Validator, Redirect, Response, File;
 use Socialite;
 use App\User;
 
@@ -17,11 +17,11 @@ class SocialController extends Controller {
             
         $getInfo = Socialite::driver($provider)->user();
         
-        $user = $this->createUser($getInfo,$provider);
+        $user = $this->createUser($getInfo, $provider);
     
         auth()->login($user);
     
-        return redirect()->to('/home');
+        return redirect()->to('/');
     
     }
 
@@ -33,6 +33,7 @@ class SocialController extends Controller {
             $user = User::create([
                 'name'     => $getInfo->name,
                 'email'    => $getInfo->email,
+                'avatar'    => $getInfo->avatar,
                 'provider' => $provider,
                 'provider_id' => $getInfo->id
             ]);

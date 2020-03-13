@@ -22,5 +22,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Rutas para login con Google
-Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect')->name('google');
 Route::get('/callback/{provider}', 'SocialController@callback');
