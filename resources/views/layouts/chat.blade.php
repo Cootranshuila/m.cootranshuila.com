@@ -1,6 +1,6 @@
 <div id="tab-rooms" class="tab tab-rooms">
     <!-- TAB ROOMS -->
-    <div class="rooms">
+    {{-- <div class="rooms">
         <div class="container">
             <div class="section-title section-title-large">
                 <h3>Most Favorite</h3>
@@ -86,6 +86,8 @@
             </div>
             <div class="separator"></div>
         </div>
-    </div>
+    </div> --}}
     <!-- END TAB ROOMS -->
+
+    
 </div>

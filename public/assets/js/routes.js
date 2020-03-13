@@ -51,6 +51,26 @@ var routes = [
   },
 
   {
+    path: '/profile/',
+    popup: {
+      content: `
+        <div class="popup">
+          <div class="view">
+            <div class="page" id="content-profile">
+
+            </div>
+          </div>
+        </div>
+      `,
+      on: {
+        open: function () {
+          perfil()
+        }
+      }
+    }
+  },
+
+  {
     path: '(.*)',
     url: './assets/page-not-found.html',
   },

@@ -37,6 +37,7 @@ jQuery(document).ready(function () {
 			}
 		})
 	})
+	dynamicSheet.open();
 });
 
 // Funcion para habilitar el boton 
@@ -61,4 +62,15 @@ function cargar_compra() {
 	jQuery('#content-compra').html(`<iframe src="https://cootranshuila.teletiquete.com/?`+datos+`" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>`)
 
 	jQuery('#form-compra')[0].reset()
+}
+
+function perfil() {
+	//Peticion para cargar la vista del perfil y los datos 
+	jQuery.ajax({
+		url: '/profile',
+		type: 'GET',
+		success: function (data) {
+			jQuery('#content-profile').html(data)
+		}
+	})
 }

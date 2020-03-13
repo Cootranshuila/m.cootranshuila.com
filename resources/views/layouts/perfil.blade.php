@@ -5,12 +5,15 @@
         <div class="header-profile">
             <div class="container">
                 <div class="header-content">
-                    <img src="assets/images/profile.jpg" alt="">
+                    <img src="{{ Auth::user()->avatar }}" alt="">
                     <div class="title-name">
                         <h5>{{ Auth::user()->name }}</h5>
                         <p><i class="ti-location-pin"></i>New York, US</p>
                     </div>
+                    
                 </div>
+                <a href="/profile/" class="float-right text-right profile-settings"><i class="ti-settings"></i></a>
+                
                 <div class="profile-statistics segments">
                     <div class="row">
                         <div class="col-33">

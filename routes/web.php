@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile');
 
 // Rutas para login con Google
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect')->name('google');

@@ -4,7 +4,7 @@
     <div class="pages">
         <div class="container">
             <div class="section-title section-title-large">
-                <h3>Pages</h3>
+                <h3>Menu</h3>
             </div>
             <div class="list">
                 <ul>

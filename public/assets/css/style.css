@@ -310,8 +310,8 @@ img {
 }
 
 .list .item-link .item-media i {
-    background: #f6c086;
-    color: #2c374c;
+    background: #00a251;
+    color: #f0f0f0;
     height: 35px;
     width: 35px;
     line-height: 35px;
@@ -1138,6 +1138,11 @@ form.list ul .item-content .item-inner .item-input-wrap.input-dropdown-wrap::bef
 /* ========== TAB PROFILE ========== */
 
 /* header profile */
+.profile-settings{
+    font-size: 25px;
+    margin-top: -38px;
+}
+
 .header-profile {
     padding: 30px 0;
 }
