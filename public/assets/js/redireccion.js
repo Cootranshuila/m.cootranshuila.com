@@ -37,7 +37,7 @@ jQuery(document).ready(function () {
 			}
 		})
 	})
-	dynamicSheet.open();
+	
 });
 
 // Funcion para habilitar el boton 

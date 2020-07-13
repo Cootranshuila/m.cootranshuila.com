@@ -21,6 +21,13 @@
 </head>
 <body>
     <div id="app">
+        <div class="block block-strong">
+            <div class="row">
+              <div class="col-75">
+                <div class="preloader color-green"></div>
+              </div>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

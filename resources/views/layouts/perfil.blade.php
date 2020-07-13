@@ -12,26 +12,41 @@
                     </div>
                     
                 </div>
-                <a href="/profile/" class="float-right text-right profile-settings"><i class="ti-settings"></i></a>
+                {{-- <a href="/profile/" class="float-right text-right profile-settings"><i class="ti-settings"></i></a> --}}
+                <div class="menu-item menu-item-dropdown float-right text-right profile-settings">
+                    <div class="menu-item-content"><i class="ti-settings"></i></div>
+                    <div class="menu-dropdown menu-dropdown-right">
+                        <div class="menu-dropdown-content">
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 1</a>
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 2</a>
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 3</a>
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 4</a>
+                            <div class="menu-dropdown-divider"></div>
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 5</a>
+                            <a href="#" class="menu-dropdown-link menu-close">Menu Item 6</a>
+                        </div>
+                    </div>
+                </div>
+                    
                 
                 <div class="profile-statistics segments">
                     <div class="row">
                         <div class="col-33">
                             <div class="content">
-                                <h5>21</h5>
-                                <p>Reviews</p>
+                                <h5>0</h5>
+                                <p>Viajes</p>
                             </div>
                         </div>
                         <div class="col-33">
                             <div class="content">
-                                <h5>65</h5>
-                                <p>Favorites</p>
+                                <h5>0</h5>
+                                <p>Programados</p>
                             </div>
                         </div>
                         <div class="col-33">
                             <div class="content">
-                                <h5>40</h5>
-                                <p>Bookings</p>
+                                <h5>0</h5>
+                                <p>Abiertos</p>
                             </div>
                         </div>
                     </div>
