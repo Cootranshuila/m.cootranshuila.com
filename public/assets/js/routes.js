@@ -1,5 +1,6 @@
 "use strict";
 var routes = [
+
   {
     path: '/',
     Url: './assets/index.html',
@@ -43,6 +44,17 @@ var routes = [
   {
     path: '/compra/',
     url: './assets/compra.html',
+  },
+
+  {
+    path: '/nuestra-flota/',
+    url: './assets/nuestra-flota.html',
+    routes: [
+      {
+        path: 'condiciones/',
+        url: './assets/condiciones.html',
+      },
+    ],
   },
 
   {

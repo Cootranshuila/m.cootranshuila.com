@@ -1,9 +1,10 @@
 jQuery(document).ready(function () {
 
-	//Peticion par listar las ciudades de Origen
+	// Peticion par listar las ciudades de Origen
 	jQuery.ajax({
 		url: 'https://wscootranshuila.teletiquete.com/WebService/pag_web.php?get_ciudad',
 		type: 'GET',
+		headers: {},
 		success: function (data) {
 			ciudades = JSON.parse(data)
 			var content = '<option value="">Seleccione el origen</option>'
@@ -37,6 +38,10 @@ jQuery(document).ready(function () {
 			}
 		})
 	})
+
+	jQuery('.dynamic-popup').on('click', function () {
+		dynamicPopup.open();
+	});
 	
 });
 
@@ -53,22 +58,28 @@ function abilitar_boton() {
 	}
 }
 
-function click_compra() {
-	setTimeout('cargar_compra()', 1000)
+function click_compra(numForm) {
+	setTimeout('cargar_compra('+numForm+')', 1000)
 }
 
-function cargar_compra() {
-	var datos = jQuery('#form-compra').serialize()
+function cargar_compra(opt) {
+	if (opt == 1) {
+		var datos = jQuery('#form-compra').serialize()
+	} else {
+		var datos = jQuery('#form-compra-fast').serialize()
+	}
 	jQuery('#content-compra').html(`<iframe src="https://cootranshuila.teletiquete.com/?`+datos+`" frameborder="0" width="100%" style="height: 100vh !important;"></iframe>`)
 
 	jQuery('#form-compra')[0].reset()
+	jQuery('#form-compra-fast')[0].reset()
+
+	fastPopup.close();
 }
 
 function perfil() {
 	//Peticion para cargar la vista del perfil y los datos 
 	jQuery.ajax({
 		url: '/profile',
-		type: 'GET',
 		success: function (data) {
 			jQuery('#content-profile').html(data)
 		}
